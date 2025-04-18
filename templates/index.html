@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>Whale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body class="bg-black text-white">
+    <div id="welcome-screen" class="screen">
+        <div class="welcome-logo">🐳</div>
+        <div class="welcome-title">Whale Trader</div>
+        <div class="welcome-subtitle">Trade your way from shrimp to whale!</div>
+        <div class="welcome-bonus" id="welcome-bonus">Calculating your starting tokens...</div>
+        <button class="welcome-button" id="start-button">Start Trading</button>
+    </div>
+    <div id="home-screen" class="screen">
+        <div class="main-content">
+            <div id="character-container">
+                <span id="character">🦐</span>
+                <div id="character-selection">
+                    <button id="prev-character" class="character-nav">←</button>
+                    <span id="character-name">shrimp</span>
+                    <button id="next-character" class="character-nav">→</button>
+                </div>
+            </div>
+            <button id="mining-button" class="btn btn-warning mt-3">Mining Upgrade</button>
+            <p class="token-score">Your Score: <span id="banana-count">0</span></p>
+            <p class="friends-counter">Traders Recruited: <span id="friends-count">0</span></p>
+            <div class="ad-block">
+                <a href="https://mbitcasinopartners2.com/ab64e1f30" target="_blank" rel="noopener noreferrer">
+                    <img src="static/icons/mbit.jpg" alt="Advertisement" class="ad-banner">
+                </a>
+            </div>            
+        </div>
+    </div>
+    <div id="leaders-screen" class="screen">
+        <h2 class="text-center mb-4">Whales</h2>
+        <div id="king-container"></div>
+        <div id="leaders-container"></div>
+    </div>
+    <div id="tasks-screen" class="screen">
+        <h2 class="text-center mb-4">Trading Tasks</h2>
+        <div id="tasks-container"></div>
+    </div>
+    <div class="bottom-nav">
+        <a href="#" data-screen="home" class="active">
+            <div><img src="static/icons/home.svg" alt="Home Icon" width="24" height="24"></div>
+            <span>Home</span>
+        </a>
+        <a href="#" data-screen="leaders">
+            <div><img src="static/icons/ranking-star.svg" alt="Leaderboard Icon" width="24" height="24"></div>
+            <span>Whales</span>
+        </a>
+        <a href="#" data-screen="tasks">
+            <div><img src="static/icons/edit.svg" alt="Task Icon" width="24" height="24"></div>
+            <span>Tasks</span>
+        </a>
+    </div>
+
+    <!-- Mining Modal -->
+    <div class="modal fade" id="miningModal" tabindex="-1" aria-labelledby="miningModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="miningModalLabel">Mining Upgrade</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="mining-modal-body">
+                    <p>Loading mining information...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning" id="mining-buy-button">Buy (499 Stars)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/static/js/script(deob).js"></script>
+</body>
+</html>
