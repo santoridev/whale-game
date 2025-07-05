@@ -1,6 +1,4 @@
-Sure! Here's your `README.md` in **English**:
 
----
 
 #  Whale Referral Game (Telegram WebApp)
 
