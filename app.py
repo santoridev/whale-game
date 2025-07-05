@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
-BOT_TOKEN = "8069974789:AAGG34OdZcUEW987VIHSlwpaP4zIF9kTCw0"  # Your bot token
+BOT_TOKEN = "YOUR_BOT_TOKEN"  # Your bot token
 
 def init_db():
     conn = sqlite3.connect('users.db')
@@ -66,8 +66,7 @@ def init_db():
             ('task_invite_3', 'Invite 3 Friends', 'Invite 3 friends to play', 300, None, 3),
             ('task_invite_5', 'Invite 5 Friends', 'Invite 5 friends to join', 500, None, 5),
             ('task_invite_10', 'Invite 10 Friends', 'Invite 10 friends to join', 1000, None, 10),
-            ('task_join1', 'Join Kolobok', 'Join and play', 300, 'https://t.me/bokgame_bot/', None),
-            ('task_join2', 'Join nikita', 'Join and play', 300, 'https://t.me/mlaffonxd/', None)
+            
         ]
         c.executemany('''
             INSERT INTO tasks (task_id, title, description, reward, link, required)
@@ -309,7 +308,7 @@ def get_tasks():
         task['completed'] = bool(completed_tasks.get(task['id'], 0))
         if task['required'] is not None:
             task['progress'] = min(user['referrals'], task['required'])
-            task['link'] = f"https://t.me/s4ntor1_bot/ssss?startapp={telegram_id}"
+            task['link'] = f"https://t.me/refferal_link/your?startapp={telegram_id}"
         else:
             task['progress'] = None
 
